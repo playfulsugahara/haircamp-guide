@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<title>HAIRCAMP オンラインサロン MOSH移行｜サロンオーナー様向けガイド</title>
+<style>
+  @page { size: A4; margin: 13mm 13mm 15mm; }
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    font-size: 10pt;
+    line-height: 1.75;
+    color: #2b2b2b;
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ============ 表紙 ============ */
+  .cover {
+    height: 250mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    page-break-after: always;
+    text-align: center;
+  }
+  .cover .badge {
+    display: inline-block; background: #ee6b72; color: #fff;
+    font-size: 11pt; font-weight: 700; letter-spacing: .18em;
+    padding: 7px 26px; border-radius: 3px; margin: 0 auto 30px;
+  }
+  .cover h1 {
+    font-size: 26pt; font-weight: 800; line-height: 1.45;
+    margin: 0 0 10px; color: #33404e;
+  }
+  .cover .sub { font-size: 13pt; color: #ee6b72; font-weight: 700; margin-bottom: 44px; }
+  .cover .lead {
+    font-size: 10.5pt; line-height: 2; color: #555; max-width: 150mm;
+    margin: 0 auto 44px; text-align: left; background: #f7f8fa;
+    border-left: 4px solid #ee6b72; padding: 18px 24px;
+  }
+  .cover .meta { font-size: 9pt; color: #999; }
+
+  /* ============ 2ページ目（ピンク・アクション集約） ============ */
+  .p1 {
+    background: #fdeff0;
+    border: 3px solid #ee6b72;
+    border-radius: 6px;
+    height: 252mm;
+    padding: 9mm 10mm;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+  }
+  .p1-ttl {
+    text-align: center;
+    font-size: 19pt;
+    font-weight: 800;
+    color: #33404e;
+    line-height: 1.4;
+    margin-bottom: 5mm;
+  }
+  .p1-ttl small { display: block; font-size: 11pt; color: #ee6b72; margin-top: 2mm; }
+  .p1-banner {
+    background: #d62c39;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 7px;
+    font-size: 13pt;
+    font-weight: 800;
+    margin-bottom: 2mm;
+  }
+  .p1-banner span { display: block; font-size: 9.5pt; font-weight: 400; margin-top: 2px; }
+  .p1-date {
+    background: #fff; border: 2px solid #d62c39; border-radius: 5px;
+    text-align: center; padding: 3.5mm 4mm; margin-bottom: 1mm;
+    font-size: 9.5pt; color: #555; line-height: 1.5;
+  }
+  .p1-date b { display: inline-block; font-size: 17pt; color: #d62c39; margin: 0 4mm; }
+  .p1-date span {
+    display: inline-block; background: #d62c39; color: #fff; border-radius: 3px;
+    padding: 1px 10px; font-size: 10pt; font-weight: 700; vertical-align: 3px;
+  }
+
+  .p1-h {
+    text-align: center;
+    font-size: 15pt;
+    font-weight: 800;
+    color: #33404e;
+    margin: 6mm 0 4mm;
+  }
+  .p1-h em { color: #d62c39; font-style: normal; font-size: 18pt; }
+
+  .act {
+    background: #fff;
+    border: 2px solid #ee6b72;
+    border-radius: 5px;
+    padding: 5mm 6mm;
+    margin-bottom: 4mm;
+    display: flex;
+    gap: 6mm;
+    align-items: flex-start;
+  }
+  .act-no {
+    flex: 0 0 13mm;
+    height: 13mm;
+    background: #ee6b72;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 17pt;
+    font-weight: 800;
+    text-align: center;
+    line-height: 13mm;
+  }
+  .act-body { flex: 1; }
+  .act-t { font-size: 14pt; font-weight: 800; color: #33404e; line-height: 1.35; }
+  .act-t b { color: #d62c39; }
+  .act-d { font-size: 10pt; color: #555; margin-top: 2mm; line-height: 1.7; }
+  .act-d .easy {
+    display: inline-block;
+    background: #fff2c9;
+    border-radius: 3px;
+    padding: 1px 8px;
+    font-weight: 700;
+    color: #8a6a00;
+    margin-top: 1.5mm;
+  }
+  .times { margin-top: 2mm; font-size: 9.5pt; }
+  .times td { padding: 1.5px 0; border: none; }
+  .times .n { color: #d62c39; font-weight: 800; width: 17mm; }
+
+  .p1-bottom { margin-top: auto; display: flex; gap: 3.5mm; }
+  .p1-bottom > div { flex: 1; }
+  .p1-money {
+    background: #fff;
+    border: 2px dashed #ee6b72;
+    border-radius: 5px;
+    padding: 5mm 6mm;
+  }
+  .p1-money { padding: 4mm 4.5mm !important; }
+  .p1-money .mt { font-size: 10.5pt; font-weight: 800; color: #d62c39; margin-bottom: 1.5mm; }
+  .p1-money p { font-size: 8.8pt; margin: 0; line-height: 1.65; }
+  .p1-foot { text-align: center; font-size: 9pt; color: #8a5f62; margin-top: 4mm; }
+
+  /* ============ アジェンダ ============ */
+  .agenda { border: 1px solid #d5d9de; border-radius: 5px; overflow: hidden; margin: 4mm 0; }
+  .agenda-row { display: flex; border-bottom: 1px solid #e6e9ec; padding: 4.5px 13px; font-size: 10pt; line-height: 1.5; }
+  .agenda-row:last-child { border-bottom: none; }
+  .agenda-row:nth-child(even) { background: #f7f8fa; }
+  .agenda-n { flex: 0 0 15mm; font-weight: 800; color: #ee6b72; }
+  .agenda-t { flex: 1; font-weight: 700; color: #33404e; }
+  .agenda-t small { display: block; font-weight: 400; font-size: 8.5pt; color: #777; }
+  .agenda-p { flex: 0 0 14mm; text-align: right; color: #888; font-size: 9.5pt; }
+  .agenda-row.hero { background: #fdeff0 !important; }
+  .agenda-row.hero .agenda-t { color: #d62c39; }
+
+  /* ============ 見出し ============ */
+  h2 {
+    font-size: 14pt; font-weight: 800; color: #fff; background: #33404e;
+    padding: 9px 14px; margin: 28px 0 15px; border-radius: 3px; page-break-after: avoid;
+  }
+  h2 .num {
+    display: inline-block; background: #ee6b72; border-radius: 2px;
+    padding: 1px 9px; margin-right: 10px; font-size: 11pt;
+  }
+  h3 {
+    font-size: 11.5pt; font-weight: 800; color: #33404e;
+    border-left: 5px solid #ee6b72; padding-left: 10px; margin: 20px 0 9px; page-break-after: avoid;
+  }
+  h4 { font-size: 10.5pt; font-weight: 700; color: #33404e; margin: 15px 0 6px; page-break-after: avoid; }
+  p { margin: 0 0 10px; }
+
+  /* ============ 表 ============ */
+  table { width: 100%; border-collapse: collapse; margin: 11px 0 15px; font-size: 9.5pt; page-break-inside: avoid; }
+  th { background: #33404e; color: #fff; font-weight: 700; text-align: left; padding: 7px 10px; border: 1px solid #33404e; }
+  td { border: 1px solid #d5d9de; padding: 7px 10px; vertical-align: top; }
+  tbody tr:nth-child(even) td { background: #f7f8fa; }
+  td.c { text-align: center; white-space: nowrap; font-weight: 700; color: #ee6b72; }
+
+  /* ============ パーツ ============ */
+  .flow {
+    background: #f7f8fa; border: 1px solid #d5d9de; border-radius: 4px;
+    padding: 15px 20px; margin: 13px 0 16px; font-size: 9.5pt; line-height: 2.05; page-break-inside: avoid;
+  }
+  .flow .who { display: inline-block; width: 26mm; font-weight: 700; color: #ee6b72; }
+  .flow .arrow { color: #aab; padding-left: 6mm; }
+
+  .must {
+    background: #fff5f5; border: 2.5px solid #d62c39; border-radius: 5px;
+    padding: 15px 19px; margin: 15px 0; page-break-inside: avoid;
+  }
+  .must .t {
+    font-size: 12pt; font-weight: 800; color: #d62c39;
+    margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1.5px dashed #f0a5aa;
+  }
+  .must p { color: #b8202c; font-weight: 700; margin-bottom: 8px; }
+  .must .plain { color: #4a4a4a; font-weight: 400; }
+  .red { color: #d62c39; font-weight: 800; }
+  .red-hl { color: #d62c39; font-weight: 800; background: linear-gradient(transparent 60%, #ffd9dc 60%); }
+
+  .safe {
+    background: #f0f9f3; border: 2px solid #2e9e5b; border-radius: 5px;
+    padding: 15px 19px; margin: 15px 0; page-break-inside: avoid;
+  }
+  .safe .t { font-size: 12pt; font-weight: 800; color: #1f7a44; margin-bottom: 7px; }
+
+  .alert {
+    background: #fdf0f1; border: 1.5px solid #ee6b72; border-radius: 4px;
+    padding: 13px 17px; margin: 13px 0; page-break-inside: avoid;
+  }
+  .alert .t { font-weight: 800; color: #d94f57; margin-bottom: 5px; font-size: 10.5pt; }
+
+  .note {
+    background: #f1f5f9; border-left: 4px solid #7a8a9a;
+    padding: 11px 15px; margin: 11px 0; font-size: 9.5pt; page-break-inside: avoid;
+  }
+
+  ul, ol { margin: 7px 0 11px; padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  .ok { color: #1a8a4a; font-weight: 700; }
+  .ng { color: #d94f57; font-weight: 700; }
+  strong { color: #33404e; }
+  .hl { background: linear-gradient(transparent 62%, #ffe08a 62%); font-weight: 700; }
+  .check li { list-style: none; margin-left: -14px; }
+  .check li::before { content: "☐"; color: #ee6b72; font-weight: 700; margin-right: 8px; }
+
+  /* ============ テンプレ枠 ============ */
+  .tpl-head {
+    background: #ee6b72; color: #fff; font-weight: 800; font-size: 11.5pt;
+    padding: 8px 14px; border-radius: 3px 3px 0 0; margin-top: 24px; page-break-after: avoid;
+  }
+  .tpl-meta {
+    background: #fdf0f1; border: 1px solid #ee6b72; border-top: none;
+    padding: 7px 14px; font-size: 9pt; color: #d94f57; font-weight: 700;
+  }
+  .tpl {
+    border: 1px solid #d5d9de; border-top: none; background: #fcfcfd;
+    padding: 15px 18px; font-size: 9pt; line-height: 1.95;
+    white-space: pre-wrap; font-family: "Hiragino Sans", sans-serif; border-radius: 0 0 3px 3px;
+  }
+
+  /* ============ 手順画像 ============ */
+  .shot { page-break-inside: avoid; margin: 0 0 8mm; text-align: center; }
+  .shot img { max-width: 100%; max-height: 178mm; border: 1px solid #d5d9de; border-radius: 3px; }
+  .shot .cap {
+    font-size: 9pt; font-weight: 700; color: #33404e; background: #f7f8fa;
+    border-left: 4px solid #ee6b72; padding: 6px 12px; margin-bottom: 6px; text-align: left;
+  }
+
+  .pb { page-break-before: always; }
+  .avoid { page-break-inside: avoid; }
+
+  footer {
+    margin-top: 28px; padding-top: 11px; border-top: 1px solid #d5d9de;
+    font-size: 8.5pt; color: #888;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================== P1：表紙 ================== -->
+<div class="cover">
+  <div><span class="badge">SALON OWNER GUIDE</span></div>
+  <h1>HAIRCAMP オンラインサロン<br>MOSH 移行のご案内</h1>
+  <div class="sub">サロンオーナー様向け｜既存会員へのご案内ガイド</div>
+  <div class="lead">
+    このたびHAIRCAMPは株式会社MOSHと業務提携し、オンラインサロンのシステムをMOSHの「会員サイト」機能へ移行いたします。<br><br>
+    本資料は、<strong>オーナー様が既存会員様へご案内いただく際の手引き</strong>です。<br>
+    <strong>次のページに「やることガイド」を1枚でまとめています。</strong>まずはそちらをご覧ください。<br>
+    そのままお使いいただける投稿文は、巻末の付録に収録しています。
+  </div>
+  <div class="meta">2026年8月25日版</div>
+</div>
+
+<!-- ================== P2：やることガイド ================== -->
+<div class="p1">
+  <div class="p1-banner">
+    このページだけお読みいただければ大丈夫です
+    <span>詳しく知りたい方だけ、3ページ目以降をご覧ください</span>
+  </div>
+
+  <div class="p1-date">
+    リリース日（既存会員様の切り替え日）<br>
+    <b>2026年9月28日（月）</b><span>全サロン一斉</span>
+  </div>
+
+  <div class="p1-h">お願いしたいことは <em>3つ</em> だけです</div>
+
+  <div class="act">
+    <div class="act-no">1</div>
+    <div class="act-body">
+      <div class="act-t">会員サイトの中身を確認する</div>
+      <div class="act-d">
+        MOSH担当者と一緒に、公開前の会員サイトをご確認ください。<br>
+        リリース日は<strong>9月28日（月）／全サロン一斉</strong>で確定しています。
+      </div>
+    </div>
+  </div>
+
+  <div class="act">
+    <div class="act-no">2</div>
+    <div class="act-body">
+      <div class="act-t">サロンのトピックスに投稿する　<b>← 最低3回</b></div>
+      <div class="act-d">
+        1回だけだと、<strong>手続きを忘れる会員様が必ず出ます。</strong>
+        <table class="times">
+          <tr><td class="n">1回目</td><td><strong>9/21（月）</strong>　…　予告（1週間前）</td></tr>
+          <tr><td class="n">2回目</td><td><strong>9/28（月）</strong>　…　手順を案内（画像を添付）</td></tr>
+          <tr><td class="n">3回目</td><td><strong>10/5（月）ごろ</strong>　…　まだの方へ再案内</td></tr>
+        </table>
+        <span class="easy">文章は3回分ぜんぶ用意しています。コピペするだけでOK</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="act">
+    <div class="act-no">3</div>
+    <div class="act-body">
+      <div class="act-t">SNSでも会員様へご案内する</div>
+      <div class="act-d">
+        <strong>Instagram・オープンチャット・公式LINE</strong>など、<strong>日々オンラインサロンで活用されているSNS</strong>で、既存会員様へご案内をお願いします。<br>
+        <strong>サロンを開いていない会員様に届く</strong>のは、こちらだけです。<br>
+        <span class="easy">SNS用の短い文章も用意しています。コピペするだけでOK</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p1-bottom">
+  <div class="p1-money">
+    <div class="mt">💰 決済について</div>
+    <p>
+      オーナー様・会員様が損を被ることのないよう、HAIRCAMPとMOSH双方で対策を講じています。既存会員様には<strong>1ヶ月無料クーポン</strong>を発行。<br>
+      <strong style="color:#d62c39">オーナー様が損をすることはありません。</strong>（→P8）
+    </p>
+  </div>
+
+  <div class="p1-money" style="border-color:#d62c39">
+    <div class="mt">📮 コンテンツ配信について</div>
+    <p>
+      定期配信されているサロン様は、<strong style="color:#d62c39">移行期間中（約2週間）はMOSHとHAIRCAMPの両方に</strong>同じ内容をアップしてください。<br>
+      片方だけだと<strong>まだ移行していない会員様が新着を見られません。</strong>（→P4）
+    </p>
+  </div>
+  </div>
+</div>
+
+<!-- ================== P2：アジェンダ ================== -->
+<h2 style="margin-top:0">この資料の構成</h2>
+<p><strong>2ページ目の「やることガイド」だけで、やることはすべて完結します。</strong><br>
+3ページ目以降は「もっと詳しく知りたいとき」「会員様から質問が来たとき」に開いてください。</p>
+
+<div class="agenda">
+  <div class="agenda-row hero"><div class="agenda-n">★</div><div class="agenda-t">オーナー様にお願いしたいこと（3つ）<small>ここだけ読めばOK</small></div><div class="agenda-p">P2</div></div>
+  <div class="agenda-row"><div class="agenda-n">1</div><div class="agenda-t">移行の全体像とスケジュール<small>いつ・誰が・何をするのか</small></div><div class="agenda-p">P4</div></div>
+  <div class="agenda-row"><div class="agenda-n">2</div><div class="agenda-t">ご案内は「最低3回」＋SNS発信<small>なぜ3回なのか／どこに何を投稿するか</small></div><div class="agenda-p">P6</div></div>
+  <div class="agenda-row"><div class="agenda-n">3</div><div class="agenda-t">決済について（損をさせない対策）<small>1ヶ月無料クーポン・二重決済の防ぎ方</small></div><div class="agenda-p">P8</div></div>
+  <div class="agenda-row"><div class="agenda-n">4</div><div class="agenda-t">会員様がつまずく8つのポイント<small>先回りして伝えると問い合わせが激減します</small></div><div class="agenda-p">P10</div></div>
+  <div class="agenda-row"><div class="agenda-n">5</div><div class="agenda-t">投稿のしかた<small>トピックス欄への手順</small></div><div class="agenda-p">P12</div></div>
+  <div class="agenda-row"><div class="agenda-n">6</div><div class="agenda-t">FAQ｜会員様に聞かれたときの回答例<small>そのまま返信できます</small></div><div class="agenda-p">P13</div></div>
+  <div class="agenda-row"><div class="agenda-n">7</div><div class="agenda-t">チェックリスト<small>やり忘れ防止</small></div><div class="agenda-p">P15</div></div>
+  <div class="agenda-row"><div class="agenda-n">8</div><div class="agenda-t">MOSHについて<small>「MOSHって何？」と聞かれたときの材料</small></div><div class="agenda-p">P15</div></div>
+  <div class="agenda-row"><div class="agenda-n">付録A</div><div class="agenda-t">そのまま使える投稿文（トピックス用 A〜D）<small>コピペ用</small></div><div class="agenda-p">P17</div></div>
+  <div class="agenda-row"><div class="agenda-n">付録B</div><div class="agenda-t">そのまま使える投稿文（SNS用 E）<small>コピペ用</small></div><div class="agenda-p">P26</div></div>
+  <div class="agenda-row"><div class="agenda-n">付録C</div><div class="agenda-t">個別の質問への返信文<small>DM・コメント用</small></div><div class="agenda-p">P28</div></div>
+  <div class="agenda-row"><div class="agenda-n">付録D</div><div class="agenda-t">会員様にお渡しする手順画像（STEP 1〜12）<small>投稿に添付する画像</small></div><div class="agenda-p">P31</div></div>
+</div>
+
+<div class="note">
+<strong>お急ぎの場合は</strong> — 2ページ目の「やることガイド」 ＋ 付録A（投稿文） ＋ 付録B（SNS文） の3か所だけで進められます。
+</div>
+
+<!-- ================== 1. 全体像 ================== -->
+<div class="pb"></div>
+<h2 style="margin-top:0"><span class="num">1</span>移行の全体像とスケジュール</h2>
+<div class="flow">
+<span class="who">オーナー様</span>MOSH担当者と会員サイトの内容を確認<br>
+<span class="arrow">↓</span><br>
+<span class="who">オーナー様</span>トピックス・SNSで事前告知（<strong>9/21（月）</strong>）<br>
+<span class="arrow">↓</span><br>
+<span class="who">オーナー様</span>トピックス・SNSで移行開始のご案内（<strong>9/28 リリース当日</strong>）<br>
+<span class="arrow">↓</span><br>
+<span class="who">会員様</span>MOSHで登録・決済（STEP 1〜12）<br>
+<span class="arrow">↓</span><br>
+<span class="who">会員様</span>ご自身でHAIRCAMP側の決済を解約<br>
+<span class="arrow">↓</span><br>
+<span class="who">運営</span>両社で会員情報を照合し、解約漏れがないか確認<br>
+<span class="arrow">↓</span><br>
+<span class="who">HAIRCAMP</span>既存の導線からMOSH会員サイトへリダイレクト設定
+</div>
+
+<h3>新規と既存で、切り替え時期が分かれます</h3>
+<table>
+  <thead><tr><th style="width:26mm">対象</th><th style="width:32mm">時期</th><th>内容</th></tr></thead>
+  <tbody>
+    <tr><td><strong>新規のお客様</strong></td><td><strong>9/7（月）〜</strong></td><td>HAIRCAMPでの入会受付を停止し、<strong>MOSHへリダイレクト</strong>されます。オーナー様のお手続きは不要です</td></tr>
+    <tr><td><strong>既存会員様</strong></td><td><strong>9/28（月）〜</strong></td><td><strong>全サロン一斉に案内を開始</strong>します。本資料でお願いしているのは、こちらの移行案内です</td></tr>
+  </tbody>
+</table>
+<div class="note"><strong>本資料は「既存会員様への移行案内」の手引きです。</strong>新規のお客様については、9/7以降は自動でMOSHへ誘導されるため、オーナー様側での対応は不要です。</div>
+
+<div class="note"><strong>あわせて、HAIRCAMPのマイページにもお申し込み手順の画像を掲載します。</strong>トピックスやSNSを見逃した会員様の受け皿になりますが、<strong>そこに気づいていただくにはオーナー様からのご案内が必要です。</strong>あくまで補助的なものとお考えください。</div>
+
+<h3>★ 移行期間中は、両方にコンテンツをアップしてください</h3>
+<div class="must">
+  <div class="t">定期的にコンテンツを配信されているサロン様へ</div>
+  <p class="plain">
+    移行期間中は、会員様が<strong>「まだHAIRCAMPにいる方」</strong>と<strong>「MOSHへ移行済みの方」</strong>に分かれます。<br>
+    どちらか一方にだけ投稿すると、<span class="red-hl">もう片方の会員様が新しいコンテンツを見られなくなります。</span><br><br>
+    お手数ですが、<strong>移行期間中（約2週間）は MOSH と HAIRCAMP の両方に、同じコンテンツをアップしてください。</strong>
+  </p>
+  <table style="margin-bottom:0">
+    <tbody>
+      <tr><td class="c" style="width:30mm">対象期間</td><td><strong>9/28（月）〜 10/12（月）ごろ</strong>（移行がひと段落するまで）</td></tr>
+      <tr><td class="c">やること</td><td>新しい動画・記事を<strong>MOSHとHAIRCAMPの両方に投稿</strong></td></tr>
+      <tr><td class="c">終了の目安</td><td>ほとんどの会員様が移行を完了したら、MOSHのみに切り替え</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="note">配信の頻度が高いサロン様ほど、ここを飛ばすと影響が大きくなります。<strong>移行が完了するまでの一時的な二重運用</strong>とお考えください。</div>
+
+<h3>スケジュールの前提</h3>
+<ul>
+  <li><strong>リリース日：2026年9月28日（月）</strong>　既存会員様の切り替え日です</li>
+  <li><strong>新規のご入会は9月7日（月）からMOSHへ切り替わります</strong>（HAIRCAMPでの入会受付は停止し、MOSHへリダイレクトされます）</li>
+  <li><strong>全サロン一斉リリース</strong>です。プロモーションの観点から、足並みを揃えて実施します</li>
+  <li>リリース日までに、<strong>MOSH担当者と会員サイトの内容をご確認</strong>ください</li>
+  <li>あわせて、<strong>更新データをMOSHへ共有いただく日程</strong>を調整します</li>
+</ul>
+<div class="note">
+<strong>なぜ更新データの共有日程を決めるのか</strong><br>
+HAIRCAMP側だけでコンテンツが更新され続けると、移行済みデータとの差分が増えてしまうためです。MOSH側でアップロード可能になったタイミングでご共有をお願いします。
+</div>
+
+<!-- ================== 2. 最低3回＋SNS ================== -->
+<div class="pb"></div>
+<h2 style="background:#d62c39;margin-top:0"><span class="num" style="background:#fff;color:#d62c39">2</span>【必読】ご案内は「最低3回」＋SNS発信</h2>
+
+<div class="must">
+  <div class="t">1回きりの投稿では、必ず取りこぼしが出ます</div>
+  <p class="plain">
+    お忙しいところ恐れ入りますが、<span class="red-hl">日にちを変えて最低3回</span>、トピックス欄に投稿してください。理由は3つあります。
+  </p>
+  <ol style="margin-bottom:0">
+    <li><strong>会員様は毎日サロンを見ているわけではありません。</strong>1回の投稿は、想像以上に届きません。</li>
+    <li><strong>今回は手続きが2段階あります。</strong>「MOSHで登録」だけで終わってしまい、<span class="red">HAIRCAMP側の解約を忘れる会員様が必ず出ます</span>。</li>
+    <li><strong>登録につまずいた方は、その場では言い出しません。</strong>2回目・3回目の投稿が、質問を出すきっかけになります。</li>
+  </ol>
+</div>
+
+<h3>トピックス欄への投稿（最低3回）</h3>
+<table>
+  <thead><tr><th style="width:32mm">回</th><th style="width:40mm">タイミング</th><th>目的</th><th style="width:24mm">投稿文</th></tr></thead>
+  <tbody>
+    <tr><td><span class="red">1回目</span>　事前告知<br><span style="font-size:8.5pt;color:#d62c39">※必須</span></td><td><strong>9/21（月）</strong><br><span style="font-size:8.5pt">（リリースの1週間前）</span></td><td>「変わる」ことを先に知らせ、驚かせない</td><td class="c">A</td></tr>
+    <tr><td><span class="red">2回目</span>　移行開始<br><span style="font-size:8.5pt;color:#d62c39">※必須</span></td><td><strong>9/28（月）</strong><br><span style="font-size:8.5pt">（リリース当日）</span></td><td>登録手順のご案内（本番・画像を添付）</td><td class="c">B</td></tr>
+    <tr><td><span class="red">3回目</span>　リマインド<br><span style="font-size:8.5pt;color:#d62c39">※必須</span></td><td><strong>10/5（月）ごろ</strong></td><td>未登録・解約忘れの取りこぼし防止</td><td class="c">C</td></tr>
+    <tr><td>（4回目）　完了のお礼<br><span style="font-size:8.5pt;color:#888">※任意</span></td><td>移行がひと段落した頃</td><td>お礼と新機能のご紹介</td><td class="c">D</td></tr>
+  </tbody>
+</table>
+
+<h3>SNSでのご案内もお願いします</h3>
+<div class="alert">
+  <div class="t">サロンを開いていない会員様に届くのは、SNSだけです</div>
+  <strong>Instagram・オープンチャット・公式LINE</strong>など、<strong>日々オンラインサロンで活用されているSNS</strong>で、既存会員様へご案内をお願いします。<br><br>
+  トピックスは「サロンを開いた人」にしか届きません。<strong>しばらくログインしていない会員様ほど手続きが漏れやすく、そういう方にこそ届ける必要があります。</strong>
+</div>
+<table>
+  <thead><tr><th style="width:46mm">場所</th><th>タイミング・内容</th><th style="width:24mm">投稿文</th></tr></thead>
+  <tbody>
+    <tr><td><strong>オープンチャット<br>／ 公式LINE</strong><br><span style="font-size:8.5pt;color:#d62c39">★いちばん届きます</span></td><td><strong>9/28（月）</strong>と<strong>10/5（月）ごろ</strong>。通知が直接届くため、最も反応が取れる導線です</td><td class="c">E-1</td></tr>
+    <tr><td><strong>Instagram フィード<br>／ X（旧Twitter）</strong></td><td><strong>9/28（月）</strong>の前後に1回ずつ。「サロンが新しくなること」「サロン内に手順を載せたこと」を短く</td><td class="c">E-1</td></tr>
+    <tr><td><strong>Instagram ストーリーズ</strong></td><td><strong>9/28（月）</strong>と<strong>10/5（月）ごろ</strong>。ひとことでOK</td><td class="c">E-2</td></tr>
+    <tr><td><strong>メルマガ</strong><br>（運用されている場合）</td><td><strong>9/28（月）</strong></td><td class="c">E-1</td></tr>
+  </tbody>
+</table>
+<div class="note">
+<strong>ふだんお使いのものだけで大丈夫です。</strong>すべてに投稿する必要はありません。<strong>会員様がいつも見ている場所</strong>に1〜2か所出していただければ十分です。<br><br>
+また、<strong>SNSには手順を詳しく書かなくて構いません。</strong>「サロン内のトピックスを見てください」と誘導するだけでOKです。詳しい手順はトピックス側に集約してください。
+</div>
+
+<!-- ================== 3. 決済 ================== -->
+<div class="pb"></div>
+<h2 style="margin-top:0"><span class="num">3</span>決済について（損をさせない対策）</h2>
+
+<div class="safe">
+  <div class="t">✅ オーナー様・会員様に、金銭的なご負担は生じません</div>
+  今回の移行にあたり、<strong>サロンオーナー様・会員様が損を被ることのないよう、HAIRCAMPとMOSH双方で対策を講じています。</strong>
+</div>
+
+<table>
+  <thead><tr><th style="width:40mm">対象</th><th>内容</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>既存会員様</strong></td>
+      <td><strong>「1ヶ月無料クーポン」を発行します。</strong><br>
+      ご案内するURLから申し込むと<strong>クーポンコードが自動で入力され、初月の料金が0円</strong>になります（割引 −100%／合計金額 ¥0）。<br>
+      登録月に料金が発生しないため、<strong>HAIRCAMP側の解約が多少前後しても、二重にお支払いいただくことはありません。</strong><br>
+      <span class="red">※クーポンは初回のみ。翌月からは通常のプラン料金となります。</span></td>
+    </tr>
+    <tr>
+      <td><strong>サロンオーナー様</strong></td>
+      <td><span class="red">この1ヶ月無料クーポンによって、オーナー様が損をすることはありません。</span><br>
+      クーポンの発行にあたって<strong>オーナー様が費用をご負担することも、売上が目減りすることもありません。</strong><br>
+      会員様は移行月分をHAIRCAMP側でお支払い済みのため、<strong>収入が途切れる月は発生しません。</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="note">
+<strong>クーポンは会員様が手入力する必要はありません。</strong>ご案内するURLから開くだけで自動的に入力され、申込画面で「OK」と表示されます。<br>
+逆に言えば、<strong>URLを経由しないとクーポンが適用されません。</strong>投稿文にURLを正しく貼っていただくことが、そのまま会員様の負担ゼロにつながります。
+</div>
+
+<h3>切り替えの流れ</h3>
+<ol>
+  <li>会員様が<strong>案内URL</strong>からMOSHで登録（クーポンが自動適用され初月0円）</li>
+  <li>会員様ご自身でHAIRCAMP側の決済を解約</li>
+  <li>切り替え・解約のご案内は<strong>HAIRCAMP・MOSH双方から</strong>会員様へお送りします</li>
+  <li>MOSH登録後、<strong>両社で会員情報を照合</strong>し、HAIRCAMP側の決済が解約されているか確認</li>
+  <li>MOSHで登録済みかつHAIRCAMP側の決済が継続している会員様がいた場合は、<strong>HAIRCAMP側で解約対応</strong></li>
+</ol>
+
+<h3>HAIRCAMP側の解約手順（会員様にご案内いただく内容）</h3>
+<div class="alert">
+  <div class="t">会員様にお伝えいただく手順は2ステップだけです</div>
+  <table style="margin:8px 0 0">
+    <tbody>
+      <tr><td class="c" style="width:14mm">1</td><td>下記ページを開く<br><strong style="font-size:10.5pt">https://haircamp.jp/my_page/subscription</strong></td></tr>
+      <tr><td class="c">2</td><td><strong>「加入中月額サービス」</strong>の欄より、解約手続きを済ませる</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="note">この手順は、投稿文B・C・Dおよび個別返信の各テンプレートにすべて記載済みです。そのままご投稿いただけます。</div>
+
+<!-- ================== 4. つまずきポイント ================== -->
+<div class="pb"></div>
+<h2 style="margin-top:0"><span class="num">4</span>会員様がつまずく8つのポイント</h2>
+<p><strong>ここを先回りして伝えるかどうかで、お問い合わせの件数が大きく変わります。</strong>投稿文にはすべて反映済みです。</p>
+
+<h3>① 必ず「案内したURL」から申し込んでもらう ★最重要</h3>
+<div class="must">
+<div class="t">別の経路から申し込むと、クーポンが適用されません</div>
+<p class="plain">
+1ヶ月無料クーポンは、<strong>ご案内するURLから開いたときだけ自動で入力されます。</strong>
+会員様がMOSHを検索したり、別のリンクから入ったりすると<span class="red">クーポンが入らず、初月から通常料金が発生します。</span><br><br>
+投稿文では「<strong>必ずこのURLからお申し込みください</strong>」と明記しています。
+<strong>URLの貼り忘れ・貼り間違いが最大の事故要因</strong>になりますので、投稿前に必ずご確認ください。
+</p>
+</div>
+
+<h3>② 氏名・メールアドレス・電話番号は、HAIRCAMPご登録時と同じものを</h3>
+<div class="alert">
+<div class="t">今回いちばん大切な注意点です</div>
+移行後、HAIRCAMPとMOSHの会員情報を照合して、<strong>決済の解約漏れがないか確認</strong>します。その照合キーが「<strong>メールアドレス</strong>」と「<strong>電話番号</strong>」です。<br>
+ここが違うと照合ができず、<strong>解約漏れが起きていても運営側で気づけません。</strong>
+</div>
+<div class="note">
+申込画面には「氏名」への注意書きしか表示されませんが、<strong>メールアドレスと電話番号のほうが照合上は重要</strong>です。投稿文では3点すべてを明記しています。
+</div>
+
+<h3>③ クーポンは「初回のみ」。翌月から通常料金になります</h3>
+<div class="alert">
+<div class="t">ここを伝えておかないと、翌月に問い合わせが来ます</div>
+申込確認画面には「<strong>※クーポンは初回のみ適用されます。次回以降は基本料金が請求されます</strong>」と表示されます。<br>
+<strong>無料になるのは初月だけ</strong>で、翌月からは通常のプラン料金がかかります。<br><br>
+「ずっと無料」と誤解されたまま翌月の請求が来ると、解約につながります。投稿文にも明記済みです。
+</div>
+
+<h3>④ メールは2通届く。1通目の「認証を行う」が必須</h3>
+<table>
+  <thead><tr><th style="width:20mm"></th><th>件名</th><th style="width:52mm">やること</th></tr></thead>
+  <tbody>
+    <tr><td class="c">1通目</td><td>安心してご利用いただくため、メールアドレスの確認をお願いします</td><td><strong>「認証を行う」をクリック（必須）</strong></td></tr>
+    <tr><td class="c">2通目</td><td>お申し込みいただき、ありがとうございます</td><td>「会員サイトへ」から入場できる</td></tr>
+  </tbody>
+</table>
+<p><strong>1通目の認証をしないとログインできず、重要なお知らせも届きません。</strong></p>
+
+<h3>⑤ 認証後の画面では「ゲストとして進む」を選ぶ</h3>
+<ul>
+  <li><span class="ok">✅ ゲストとして進む</span> ← こちらを選ぶ（サービスを利用する側）</li>
+  <li><span class="ng">✕ クリエイターとして進む</span> ← 選ぶと販売者側の設定画面に入ってしまいます</li>
+</ul>
+<p><strong>間違えやすい箇所です。</strong></p>
+
+<h3>⑥ メールが届かないときは迷惑メールフォルダを確認</h3>
+<p>送信元は <strong>hello@themosh.jp</strong> です。「<strong>@themosh.jp からのメールを受信できるよう設定を</strong>」と添えておくと親切です。</p>
+
+<h3>⑦ MOSH登録後、HAIRCAMPの決済解約を忘れずに ★</h3>
+<div class="alert">
+<div class="t">順番が大切です</div>
+① 案内URLからMOSHで登録（初月0円）　→　② そのあと、ご自身でHAIRCAMP側の決済を解約<br><br>
+1ヶ月無料クーポンにより金銭的な損は生じませんが、<strong>解約されないまま翌月に入ると、両方の支払いが発生してしまいます。</strong>3回目のリマインド投稿で必ず念押ししてください。
+</div>
+
+<h3>⑧ 会員サイトへの入り口は2か所ある</h3>
+<ul>
+  <li>申し込み完了画面の「<strong>会員サイトへアクセスする</strong>」または「<strong>会員サイトを見る</strong>」</li>
+  <li>2通目のメール内の「<strong>会員サイトへ</strong>」ボタン</li>
+</ul>
+<p>どちらからでも入れます。<strong>ブックマークをおすすめ</strong>する一文を添えると親切です。</p>
+
+<!-- ================== 5. 投稿のしかた ================== -->
+<div class="pb"></div>
+<h2 style="margin-top:0"><span class="num">5</span>投稿のしかた</h2>
+<ol>
+  <li>HAIRCAMPのオンラインサロン画面を開く</li>
+  <li><strong>トピックス欄（掲示板）</strong> → 新規投稿</li>
+  <li>付録Aから該当する投稿文（A・B・C・D）をコピー</li>
+  <li><strong>【　】の部分をご自身のサロン名・日程に書き換える</strong></li>
+  <li><strong>STEP 1〜12の手順画像を添付</strong>する（2回目の投稿時／画像は付録D）</li>
+  <li>投稿</li>
+  <li><strong>付録BのSNS用文章を、Instagram・X・ストーリーズにも投稿</strong></li>
+</ol>
+<div class="note">投稿前に、<strong>【　】の書き換え漏れがないか</strong>必ず読み返してください。</div>
+<div class="must">
+  <div class="t">これを「最低3回」繰り返してください</div>
+  <p class="plain">
+    1回目＝投稿文A、2回目＝投稿文B（画像添付）、3回目＝投稿文C。<br>
+    <span class="red-hl">同じ内容の使い回しではなく、回ごとに役割の違う文章</span>をご用意していますので、順番どおりにお使いください。
+  </p>
+</div>
+
+<!-- ================== 6. FAQ ================== -->
+<div class="pb"></div>
+<h2 style="margin-top:0"><span class="num">6</span>FAQ｜会員様に聞かれたときの回答例</h2>
+<p>そのままお使いいただけます。</p>
+
+<h4>Q. なぜ移行するのですか？</h4>
+<div class="note">HAIRCAMPと株式会社MOSHの業務提携により、オンラインサロンをより充実した環境でお届けできるようになりました。動画の検索や「あとで見る」機能など、これまでよりコンテンツを楽しんでいただきやすくなります。</div>
+
+<h4>Q. 追加でお金がかかりますか？</h4>
+<div class="note">いいえ。二重にご負担いただくことのないよう対策を講じています。サロン内でご案内するURLから申し込むと<strong>1ヶ月無料クーポンが自動で適用され、初月0円</strong>になりますので、切り替えのタイミングで余分な料金は発生しません（クーポンは初回のみ。翌月から通常料金です）。解約のお手続きが漏れていないか、運営側でも確認いたします。</div>
+
+<h4>Q. HAIRCAMPの解約はどこからできますか？</h4>
+<div class="note">下記ページよりお手続きいただけます。<br><strong>https://haircamp.jp/my_page/subscription</strong><br>お進みいただき、<strong>「加入中月額サービス」の欄</strong>より解約手続きをお済ませください。</div>
+
+<h4>Q. 登録しないとどうなりますか？</h4>
+<div class="note">2026年9月28日（月）以降、コンテンツはMOSHの会員サイトでの配信となります。お手数ですがお早めのご登録をお願いいたします。</div>
+
+<h4>Q. これまでのコンテンツは見られますか？</h4>
+<div class="note">はい。<strong>これまでのコンテンツもそのまますべて引き継がれます。</strong>移行後も変わらずご覧いただけます。新しい会員サイトでは検索やタグ機能もあるため、過去のコンテンツもこれまでより探しやすくなります。</div>
+
+<h4>Q. スマホでも見られますか？</h4>
+<div class="note">はい。スマートフォン・PCどちらからでもご覧いただけます。</div>
+
+<h4>Q. 名前を間違えて登録してしまいました</h4>
+<div class="note">ご連絡ください。運営側で確認・対応いたします。（※照合に影響するため、必ず申告いただくようご案内ください）</div>
+
+<h4>Q. メールが届きません</h4>
+<div class="note">迷惑メールフォルダをご確認ください。送信元は hello@themosh.jp です。見当たらない場合は申し込み完了画面の「確認メールを再送」からお試しください。</div>
+
+<!-- ================== 7. チェックリスト ================== -->
+<div class="pb"></div>
+<h2 style="margin-top:0"><span class="num">7</span>チェックリスト</h2>
+<div class="avoid">
+<h4>準備</h4>
+<ul class="check">
+  <li>MOSH担当者と会員サイトの内容を確認した</li>
+  <li>リリース日が<strong>9/28（月）</strong>であることを確認した</li>
+  <li>更新データをMOSHへ共有する日程を決めた</li>
+  <li>STEP 1〜12の手順画像を手元に用意した</li>
+  <li>（定期配信されている場合）<strong>移行期間中は両方にアップする</strong>体制を確認した</li>
+</ul>
+<h4 style="color:#d62c39">告知　★最低3回。1回でも欠けると取りこぼしが出ます</h4>
+<ul class="check">
+  <li><span class="red">【必須】</span>1回目（事前告知・投稿文A）をトピックスに投稿した</li>
+  <li><span class="red">【必須】</span>2回目（移行開始・投稿文B）を投稿した ＋ STEP画像を添付した</li>
+  <li><span class="red">【必須】</span>3回目（リマインド・投稿文C）を投稿した</li>
+  <li><span class="red">【必須】</span>SNS（Instagram・X・ストーリーズ等）でも発信した</li>
+</ul>
+<h4>フォロー</h4>
+<ul class="check">
+  <li>未登録の会員様をリスト化した</li>
+  <li>更新データをMOSHへ共有した</li>
+  <li>移行完了のお礼を投稿した</li>
+</ul>
+</div>
+
+<!-- ================== 8. MOSHについて ================== -->
+<h2><span class="num">8</span>MOSHについて</h2>
+<p>「MOSHって何？」と聞かれたときのために。以下はすべて<strong>MOSH社の公式発表に基づく数値</strong>です。</p>
+<table>
+  <thead><tr><th style="width:56mm">項目</th><th>内容</th></tr></thead>
+  <tbody>
+    <tr><td>会社設立</td><td>2017年7月</td></tr>
+    <tr><td>登録クリエイター数</td><td><span class="hl">10万人</span>（2026年6月22日時点）</td></tr>
+    <tr><td>累計購入ゲスト数</td><td><span class="hl">50万人超</span></td></tr>
+    <tr><td>累計流通総額（GMV）</td><td><span class="hl">500億円超</span></td></tr>
+    <tr><td>今回使う「会員サイト」機能</td><td>2026年8月3日 提供開始</td></tr>
+  </tbody>
+</table>
+<h3>会員サイトでできるようになること</h3>
+<ul>
+  <li><strong>動画・記事・音声</strong>に対応（容量制限なし）</li>
+  <li><strong>AIが動画・音声の概要と目次を自動生成</strong> — 見たい場所からすぐ再生できる</li>
+  <li><strong>タグ・キーワード検索</strong>、フォルダ整理 — 過去コンテンツが探しやすい</li>
+  <li><strong>「あとで見る」「閲覧履歴」「通知」</strong> — 見逃しや見返しがラクになる</li>
+  <li><strong>予約公開・期間限定公開</strong> — 新着コンテンツを計画的にお届けできる</li>
+</ul>
+
+<!-- ================== 付録A ================== -->
+<div class="pb"></div>
+<h2 style="background:#ee6b72;margin-top:0">付録A　そのまま使える投稿文（トピックス用）</h2>
+<p>枠内をまるごとコピーして、<strong>【　】の部分を書き換えて</strong>ご投稿ください。</p>
+<table>
+  <thead><tr><th style="width:44mm">【　】</th><th>入れるもの</th></tr></thead>
+  <tbody>
+    <tr><td>【サロン名】</td><td>ご自身のオンラインサロン名</td></tr>
+    <tr><td>【オーナー名】</td><td>ご自身のお名前</td></tr>
+    <tr><td>【MOSH申込URL】</td><td>MOSHの申し込みページURL</td></tr>
+  </tbody>
+</table>
+<div class="note"><strong>コピー＆ペーストで使う場合は、別紙のテキストファイル「コピペ用_会員向け案内文テンプレート」をご利用ください。</strong>（PDFからのコピーは改行が崩れる場合があります）</div>
+
+<div class="tpl-head">投稿文A｜1回目・事前告知</div>
+<div class="tpl-meta">投稿タイミング：9/21（月）（リリースの1週間前）</div>
+<div class="tpl">【重要なお知らせ】サロンのシステムが新しくなります
+
+いつも【サロン名】にご参加いただき、ありがとうございます。
+【オーナー名】です。
+
+このたびHAIRCAMPが株式会社MOSHと業務提携し、
+当サロンのシステムを、MOSHの「会員サイト」へ移行することになりました。
+
+■ 何が良くなるの？
+
+・動画をキーワードやタグで検索できるようになります
+・「あとで見る」「閲覧履歴」で、見逃し・見返しがラクになります
+・AIが動画の目次を自動で作るので、見たいところからすぐ再生できます
+・新着コンテンツの通知が届くようになります
+
+これまでのコンテンツも、そのまますべて引き継がれます。
+移行後も変わらずご覧いただけますので、ご安心ください。
+
+■ 料金のご負担は増えません
+
+移行にあたって、みなさまに余分なご負担が生じないよう
+HAIRCAMPとMOSH双方で対策を講じています。
+安心してお待ちください。
+
+■ 移行はいつ？
+
+2026年9月28日（月）を予定しています。
+当日、こちらのトピックスで登録手順をご案内しますので、
+お手続きをお願いいたします。
+
+■ お願い
+
+移行の際、簡単なご登録のお手続きが必要になります。
+所要時間は5分ほどです。
+
+くわしい手順は当日ご案内しますので、
+まずは「そういう予定があるんだな」と覚えておいていただけたら嬉しいです。
+
+引き続きよろしくお願いいたします！</div>
+
+<div class="pb"></div>
+<div class="tpl-head" style="margin-top:0">投稿文B｜2回目・移行開始のご案内　★メイン</div>
+<div class="tpl-meta">投稿タイミング：9/28（月）リリース当日　／　⚠️ STEP 1〜12 の手順画像を添付してください</div>
+<div class="tpl">【本日より】新しい会員サイトへの移行手続きのお願い
+
+いつも【サロン名】にご参加いただき、ありがとうございます。
+【オーナー名】です。
+
+本日より、新しい会員サイト（MOSH）へのお引っ越しを開始します。
+お手数をおかけしますが、下記の手順でご登録をお願いいたします。
+
+所要時間は5分ほどです。
+
+━━━━━━━━━━━━━━━━━━
+■ 最初にお読みください（大切なこと）
+━━━━━━━━━━━━━━━━━━
+
+◆ 料金を二重にご負担いただくことはありません
+
+　みなさまに余分なご負担が生じないよう、
+　「1ヶ月無料クーポン」をご用意しています。
+
+　★下記のURLから開いていただくと、
+　　クーポンコードが自動で入力されます（初月0円）
+
+　※必ず下記のURLからお申し込みください
+　　別の経路から申し込むとクーポンが適用されません
+　※クーポンは初回のみ適用されます
+　　翌月以降は通常料金となります
+
+　安心してお手続きを進めてください。
+
+◆ これまでのコンテンツはそのまま引き継がれます
+
+　過去の動画・記事もすべて移行されますので、
+　移行後も変わらずご覧いただけます。
+
+◆ ご登録は、HAIRCAMPと「同じ情報」でお願いします
+
+　・お名前
+　・メールアドレス
+　・電話番号
+
+　この3つは、HAIRCAMPにご登録のものと同じにしてください。
+　会員様の情報を照合するために使用します。
+　違う情報で登録されると、正しく引き継ぎができません。
+
+◆ お手続きの順番
+
+　① まずMOSHでご登録
+　② そのあと、HAIRCAMPの決済を解約
+
+　この順番でお願いします。
+　逆にすると、コンテンツが見られない期間ができてしまいます。
+
+━━━━━━━━━━━━━━━━━━
+■ ご登録の手順（全12ステップ）
+━━━━━━━━━━━━━━━━━━
+
+▼ 申し込みページはこちら（必ずこちらから）
+【MOSH申込URL】
+
+【STEP 1】「申し込みへ進む」をタップ
+　※ボタンは上下2か所にあります。どちらでもOKです
+
+【STEP 2】申込者情報を入力
+　★お名前・メールアドレス・電話番号は
+　　HAIRCAMPにご登録のものと同じにしてください
+　　パスワードは半角英数8〜30文字（大文字・小文字・数字を含む）
+
+【STEP 3】クーポンコードが入っているか確認
+　★上のURLから開いていれば、自動で入力されています
+　　「OK」と表示されていれば適用されています
+
+【STEP 4】カード情報を入力
+　カード番号・有効期限・セキュリティコードを入力します
+
+【STEP 5】割引が入っているか確認
+　★「クーポンによる割引 −100%」
+　　「合計金額 ¥0／月」になっていればOKです
+
+【STEP 6】「申し込みを確定する」をタップ
+
+【STEP 7】「会員サイトへアクセスする」または
+　　　　　「会員サイトを見る」をタップ
+　※どちらでもOKです
+
+【STEP 8】MOSHからメールが2通届きます
+　ご自身のメール（Gmail等）の受信トレイをご確認ください
+　見当たらない場合は「迷惑メールフォルダ」もご確認ください
+
+【STEP 9】1通目のメールで「認証を行う」をタップ
+　件名：「安心してご利用いただくため、メールアドレスの確認をお願いします」
+　★この認証をしないとログインできません。必ず行ってください
+
+【STEP 10】「認証が完了しました」と表示されたらOK
+　★2つボタンが出てきますが「ゲストとして進む」を選んでください
+　　（「クリエイターとして進む」は販売者向けの画面です）
+
+【STEP 11】2通目のメールの「会員サイトへ」からも入れます
+
+【STEP 12】会員サイトが開けたら完了です！
+
+※ 画像も添付していますので、あわせてご覧ください。
+
+━━━━━━━━━━━━━━━━━━
+■ ご登録のあとに（お忘れなく）
+━━━━━━━━━━━━━━━━━━
+
+MOSHでのご登録が完了しましたら、
+お手数ですが HAIRCAMP側の決済を解約してください。
+
+▼ 解約のお手続きはこちら
+https://haircamp.jp/my_page/subscription
+　↑ 上記ページを開き、「加入中月額サービス」の欄より
+　　 解約手続きをお済ませください
+
+※ 解約のご案内は、HAIRCAMP・MOSH双方からもお送りします
+※ お手続きが漏れていないか運営側でも確認いたしますが、
+　 まずはご自身での解約をお願いいたします
+
+━━━━━━━━━━━━━━━━━━
+■ 困ったときは
+━━━━━━━━━━━━━━━━━━
+
+・メールが届かない
+　→ 迷惑メールフォルダをご確認ください
+　　 送信元は hello@themosh.jp です
+　　 @themosh.jp からのメールを受信できるよう設定をお願いします
+
+・名前やメールアドレスを間違えて登録してしまった
+　→ このトピックスかDMでご連絡ください。運営で対応いたします
+
+・その他ご不明な点
+　→ お気軽にご連絡ください
+
+━━━━━━━━━━━━━━━━━━
+
+お手数をおかけしますが、お早めにお手続きをお願いいたします。
+
+これまでよりも快適に学んでいただける環境になります。
+どうぞよろしくお願いいたします！</div>
+
+<div class="pb"></div>
+<div class="tpl-head" style="margin-top:0">投稿文C｜3回目・リマインド</div>
+<div class="tpl-meta">投稿タイミング：10/5（月）ごろ</div>
+<div class="tpl">【まだの方へ】会員サイトへの移行手続きのお願い（再掲）
+
+【オーナー名】です。
+先日ご案内した新しい会員サイトへの移行、
+すでに多くの方にお手続きいただいています。ありがとうございます！
+
+まだお手続きがお済みでない方へ、あらためてご案内します。
+
+■ お手続きは2つだけです
+
+　① MOSHでご登録（初月0円のクーポンが自動で入ります）
+　　 ※必ず下記のURLからお申し込みください
+　　 → 【MOSH申込URL】
+
+　② そのあと、HAIRCAMPの決済を解約
+　　 → https://haircamp.jp/my_page/subscription
+　　　 「加入中月額サービス」の欄より解約手続きを行ってください
+
+所要時間は5分ほどです。
+
+■ よくあるつまずきポイント
+
+　✅ お名前・メールアドレス・電話番号は
+　　 HAIRCAMPと同じものでご登録ください
+
+　✅ MOSHから届くメール2通のうち、
+　　 1通目の「認証を行う」を必ずクリックしてください
+
+　✅ 認証後の画面では「ゲストとして進む」を選んでください
+
+　✅ メールが見当たらないときは迷惑メールフォルダをご確認ください
+　　 （送信元：hello@themosh.jp）
+
+■ すでにMOSHにご登録済みの方へ ★大切なお願い
+
+HAIRCAMP側の決済の解約はお済みでしょうか？
+
+解約されないままだと、来月から両方のお支払いが発生してしまいます。
+まだの方は、お手数ですが今のうちにご確認をお願いいたします。
+
+お手数をおかけしますが、お早めにお手続きをお願いいたします。
+
+ご不明な点があれば、お気軽にご連絡ください。
+一つひとつ対応いたします！</div>
+
+<div class="tpl-head">投稿文D｜4回目・移行完了のお礼（任意）</div>
+<div class="tpl-meta">投稿タイミング：移行がひと段落した頃</div>
+<div class="tpl">【ご協力ありがとうございました】新しい会員サイトが本格スタートします
+
+【オーナー名】です。
+
+会員サイトへの移行手続き、ご協力いただきありがとうございました。
+本日より、新しい環境で本格的にスタートします！
+
+■ せっかくなので、新しい機能をご紹介します
+
+◆ 検索とタグ
+　見たい動画をキーワードやタグからすぐ探せます
+
+◆ あとで見る
+　気になったコンテンツを保存して、あとからまとめて見られます
+
+◆ 閲覧履歴
+　「あれ、どこまで見たっけ？」がなくなります
+
+◆ AI目次
+　動画の目次が自動で作られるので、見たいところから再生できます
+
+◆ 通知
+　新しいコンテンツが公開されたらお知らせが届きます
+
+■ ブックマークをおすすめします
+
+会員サイトのページをブックマーク（お気に入り登録）しておくと、
+次回からすぐアクセスできます。
+
+■ まだお手続きがお済みでない方へ
+
+引き続きご登録を受け付けています。
+【MOSH申込URL】
+
+■ HAIRCAMP側の解約はお済みですか？
+
+MOSHでのご登録が完了している方は、
+HAIRCAMP側の決済の解約をお願いいたします。
+https://haircamp.jp/my_page/subscription
+　↑ 上記ページを開き、「加入中月額サービス」の欄より
+　　 解約手続きをお済ませください
+
+これからも、より良いコンテンツをお届けしていきます。
+引き続きよろしくお願いいたします！</div>
+
+<!-- ================== 付録B：SNS ================== -->
+<div class="pb"></div>
+<h2 style="background:#ee6b72;margin-top:0">付録B　そのまま使える投稿文（SNS用）</h2>
+<div class="alert">
+<div class="t">SNSには手順を詳しく書かなくて大丈夫です</div>
+役割は「<strong>サロンを開いていない会員様に、気づいてもらうこと</strong>」だけ。
+くわしい手順はトピックス側に集約し、SNSからはそこへ誘導してください。<br><br>
+<strong>Instagram・オープンチャット・公式LINE</strong>など、ふだんオンラインサロンで使われている場所に投稿してください。<strong>すべてに出す必要はありません。</strong>
+</div>
+
+<div class="tpl-head">投稿文E-1｜オープンチャット／公式LINE／Instagram／X／メルマガ</div>
+<div class="tpl-meta">投稿タイミング：9/28（月）と 10/5（月）ごろ</div>
+<div class="tpl">【サロンメンバーの皆さまへ大切なお知らせ】
+
+オンラインサロン「【サロン名】」の会員サイトが
+新しく生まれ変わります✨
+
+▼ 何が変わる？
+・動画をキーワードで検索できる
+・「あとで見る」で見逃しゼロ
+・新着コンテンツの通知が届く
+
+▼ ご参加中の皆さまへ
+かんたんな移行のお手続きをお願いしています。
+所要時間は5分ほどです。
+
+手順はサロン内の「トピックス」に載せていますので、
+そちらをご確認ください🙏
+
+1ヶ月無料クーポンをご用意していますので、
+料金を二重にご負担いただくことはありません。
+安心してお手続きくださいね。
+
+2026年9月28日（月）よりスタートします。
+よろしくお願いいたします！</div>
+
+<div class="tpl-head">投稿文E-2｜ストーリーズ（短文）</div>
+<div class="tpl-meta">投稿タイミング：9/28（月）／10/5（月）ごろ の2回</div>
+<div class="tpl">＜9/28（月）リリース当日＞
+
+【サロンメンバーの方へ】
+会員サイトが新しくなりました✨
+移行のお手続きをお願いしています🙏
+
+手順はサロンのトピックスに載せています！
+5分で終わります◎
+
+（→ サロンへのリンクを貼る）
+
+
+＜1週間後＞
+
+【まだの方へ】
+会員サイトの移行手続き、お済みですか？
+
+まだの方はサロンのトピックスをご確認ください🙏
+5分で終わります◎
+
+すでに登録された方も、
+HAIRCAMP側の解約をお忘れなく✅
+
+（→ サロンへのリンクを貼る）</div>
+
+<!-- ================== 付録C：個別返信 ================== -->
+<div class="pb"></div>
+<h2 style="background:#ee6b72;margin-top:0">付録C　個別の質問への返信文</h2>
+<p>DMやコメントで個別に聞かれたとき、そのままお使いいただけます。</p>
+
+<div class="tpl-head" style="font-size:10.5pt">「なんで移行するの？」</div>
+<div class="tpl">ご質問ありがとうございます！
+HAIRCAMPと株式会社MOSHの業務提携により、
+オンラインサロンをより充実した環境でお届けできるようになりました。
+
+動画の検索や「あとで見る」機能など、
+これまでよりコンテンツを楽しんでいただきやすくなります。
+お手数をおかけしますが、よろしくお願いいたします。</div>
+
+<div class="tpl-head" style="font-size:10.5pt">「また新しくお金がかかるの？」</div>
+<div class="tpl">ご心配おかけしてすみません。二重にご負担いただくことはありません。
+
+みなさまに余分なご負担が生じないよう、
+「1ヶ月無料クーポン」をご用意しています。
+
+サロン内でご案内しているURLから開いていただくと、
+クーポンが自動で適用され、初月0円でご登録いただけます。
+（※クーポンは初回のみ。翌月以降は通常料金となります）
+
+MOSHでのご登録のあと、HAIRCAMP側の決済を解約していただく
+「切り替え」のかたちになります。
+
+解約のお手続きが漏れていないか運営側でも確認いたしますので、
+ご安心ください。</div>
+
+<div class="tpl-head" style="font-size:10.5pt">「HAIRCAMPの解約ってどこから？」</div>
+<div class="tpl">ご確認ありがとうございます。こちらからお手続きいただけます。
+
+https://haircamp.jp/my_page/subscription
+　↑ 上記ページを開き、「加入中月額サービス」の欄より
+　　 解約手続きをお済ませください
+
+MOSHでのご登録が完了してからの解約をおすすめします。
+（先に解約されると、コンテンツが見られない期間ができてしまうため）</div>
+
+<div class="tpl-head" style="font-size:10.5pt">「メールが届かない」</div>
+<div class="tpl">ご連絡ありがとうございます。
+まず迷惑メールフォルダをご確認いただけますでしょうか。
+送信元は hello@themosh.jp です。
+
+見当たらない場合は、申し込み完了画面の「確認メールを再送」から
+再送をお試しください。
+
+@themosh.jp からのメールを受信できるよう設定いただけると確実です。
+それでも届かない場合は、あらためてご連絡ください。</div>
+
+<div class="tpl-head" style="font-size:10.5pt">「名前／メールアドレスを間違えて登録した」</div>
+<div class="tpl">ご連絡ありがとうございます。教えていただけて助かりました。
+
+会員情報の照合に使用する項目のため、運営側で確認・対応いたします。
+お手数ですが、下記をお知らせいただけますでしょうか。
+
+・HAIRCAMPにご登録のお名前／メールアドレス
+・MOSHにご登録したお名前／メールアドレス
+
+こちらで対応いたしますので、ご安心ください。</div>
+
+<div class="tpl-head" style="font-size:10.5pt">「登録しないとどうなる？」</div>
+<div class="tpl">ご質問ありがとうございます。
+2026年9月28日（月）以降、コンテンツはMOSHの会員サイトでの配信となります。
+
+お手数をおかけしますが、お早めに
+ご登録いただけますようお願いいたします。
+
+手順でわからないところがあれば、いつでもご連絡ください。
+一緒に進めさせていただきます！</div>
+
+<div class="tpl-head" style="font-size:10.5pt">「今までのコンテンツは見られる？」</div>
+<div class="tpl">ご質問ありがとうございます。
+これまでのコンテンツも、そのまますべて引き継がれます。
+移行後も変わらずご覧いただけますので、ご安心ください。
+
+新しい会員サイトでは検索やタグ機能もありますので、
+過去のコンテンツもこれまでより探しやすくなります。</div>
+
+<!-- ================== 付録D：画像 ================== -->
+<div class="pb"></div>
+<h2 style="background:#ee6b72;margin-top:0">付録D　会員様にお渡しする手順画像（STEP 1〜12）</h2>
+<div class="shot"><div class="cap">STEP 1　「申し込みへ進む」をタップ（ボタンは上下2か所・どちらでもOK）</div><img src="shots/01.png" alt="01_商品ページ"></div>
+<div class="shot"><div class="cap">STEP 2　申込者情報を入力　★氏名・メールアドレス・電話番号はHAIRCAMPと同じものを</div><img src="shots/02.png" alt="02_申込者情報"></div>
+<div class="shot"><div class="cap">STEP 3　クーポンが入っているか確認　★URLから開けば自動入力。「OK」表示ならOK</div><img src="shots/03.png" alt="03_クーポン確認"></div>
+<div class="shot"><div class="cap">STEP 4　カード情報を入力</div><img src="shots/04.png" alt="04_カード情報"></div>
+<div class="shot"><div class="cap">STEP 5　割引が入っているか確認　★「−100%」「合計金額 ¥0／月」ならOK</div><img src="shots/05.png" alt="05_内容確認"></div>
+<div class="shot"><div class="cap">STEP 6　「申し込みを確定する」をタップ</div><img src="shots/06.png" alt="06_申し込み確定"></div>
+<div class="shot"><div class="cap">STEP 7　会員サイトへはどちらかをタップ</div><img src="shots/07.png" alt="07_申し込み完了"></div>
+<div class="shot"><div class="cap">STEP 8　MOSHからメールが2通届きます</div><img src="shots/08.png" alt="08_メール受信"></div>
+<div class="shot"><div class="cap">STEP 9　1通目のメールで「認証を行う」をタップ　★これをしないとログインできません</div><img src="shots/09.png" alt="09_メール認証"></div>
+<div class="shot"><div class="cap">STEP 10　認証完了　★「ゲストとして進む」を選ぶ（クリエイターとして進む ではありません）</div><img src="shots/10.png" alt="10_認証完了"></div>
+<div class="shot"><div class="cap">STEP 11　2通目のメールからも会員サイトに入れます</div><img src="shots/11.png" alt="11_会員サイトへ"></div>
+<div class="shot"><div class="cap">STEP 12　会員サイトが開けたら完了です</div><img src="shots/12.png" alt="12_会員サイト"></div>
+
+<footer>
+<strong>出典</strong>｜MOSHの実績数値・機能に関する記載は、以下の公式発表に基づいています。<br>
+・MOSH、登録クリエイター数10万人を突破。サービスECプラットフォームとして、50万人が利用する累計500億円超の経済圏に<br>
+・登録クリエイター10万人のMOSH、新機能「会員サイト」「商品」を2026年8月3日に提供開始（PR TIMES）<br><br>
+HAIRCAMP オンラインサロン MOSH移行｜サロンオーナー様向けガイド　2026年8月25日版
+</footer>
+
+</body>
+</html>

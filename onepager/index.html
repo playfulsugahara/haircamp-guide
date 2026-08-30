@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<title>HAIRCAMP オンラインサロン MOSH移行のご案内｜サロンオーナー様へ</title>
+<style>
+  @page { size: A4; margin: 9mm 9mm 8mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    color: #2b2b2b; margin: 0; font-size: 9pt; line-height: 1.6;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+
+  /* ===== ヘッダー ===== */
+  .hd {
+    background: #ee6b72; color: #fff; border-radius: 5px;
+    padding: 3mm 5mm; margin-bottom: 2.4mm; display: flex;
+    align-items: center; justify-content: space-between;
+  }
+  .hd h1 { margin: 0; font-size: 14pt; font-weight: 800; line-height: 1.3; }
+  .hd h1 span { display: block; font-size: 9.5pt; font-weight: 400; opacity: .95; margin-top: 1mm; }
+  .hd .tag {
+    background: #fff; color: #d62c39; font-size: 9pt; font-weight: 800;
+    border-radius: 3px; padding: 2mm 4mm; text-align: center; line-height: 1.4; white-space: nowrap;
+  }
+
+  /* ===== 見出し ===== */
+  .h {
+    font-size: 11pt; font-weight: 800; color: #fff; background: #33404e;
+    padding: 1.5mm 3mm; border-radius: 3px; margin: 2.2mm 0 1.6mm;
+  }
+  .h em { font-style: normal; color: #ffd9dc; }
+
+  /* ===== 日程 ===== */
+  .sched { display: flex; gap: 3mm; }
+  .sc {
+    flex: 1; border: 2px solid #d5d9de; border-radius: 5px; padding: 2.4mm 3.5mm; background: #f7f8fa;
+  }
+  .sc.on { border-color: #d62c39; background: #fff5f5; }
+  .sc .who { font-size: 9.5pt; font-weight: 800; color: #33404e; }
+  .sc .dt { font-size: 13.5pt; font-weight: 800; color: #8a929b; margin: .5mm 0 1mm; }
+  .sc.on .dt { color: #d62c39; }
+  .sc .ds { font-size: 8.5pt; line-height: 1.55; color: #555; }
+  .sc .badge {
+    display: inline-block; background: #d62c39; color: #fff; font-size: 7.5pt;
+    font-weight: 700; border-radius: 2px; padding: 0 5px; margin-left: 2mm; vertical-align: 2px;
+  }
+
+  /* ===== アクション ===== */
+  .act { border: 2px solid #ee6b72; border-radius: 5px; padding: 2.3mm 3.5mm; margin-bottom: 1.7mm; display: flex; gap: 3.5mm; }
+  .no {
+    flex: 0 0 8mm; height: 8mm; background: #ee6b72; color: #fff; border-radius: 50%;
+    font-size: 12pt; font-weight: 800; text-align: center; line-height: 8mm;
+  }
+  .ab { flex: 1; }
+  .at { font-size: 11pt; font-weight: 800; color: #33404e; line-height: 1.3; }
+  .at b { color: #d62c39; }
+  .ad { font-size: 8.5pt; color: #555; margin-top: 1mm; line-height: 1.6; }
+  .easy {
+    display: inline-block; background: #fff2c9; color: #8a6a00;
+    font-weight: 700; border-radius: 2px; padding: 0 6px; font-size: 8pt;
+  }
+  .cal { width: 100%; border-collapse: collapse; margin-top: 1.5mm; font-size: 8.5pt; }
+  .cal td { padding: .8mm 0; border: none; }
+  .cal .n { color: #d62c39; font-weight: 800; width: 13mm; }
+  .cal .d { font-weight: 800; color: #33404e; width: 24mm; }
+
+  /* ===== 会員へ伝えるポイント ===== */
+  .pts { display: flex; gap: 2.5mm; }
+  .pt {
+    flex: 1; border: 1.5px solid #ee6b72; border-radius: 4px; padding: 2.1mm 2.6mm; background: #fff;
+  }
+  .pt .pn { font-size: 8pt; font-weight: 800; color: #fff; background: #ee6b72; border-radius: 2px; padding: 0 5px; display: inline-block; }
+  .pt .pb { font-size: 9pt; font-weight: 800; color: #33404e; margin: 1mm 0 .5mm; line-height: 1.35; }
+  .pt .pd { font-size: 7.8pt; color: #666; line-height: 1.5; }
+
+  /* ===== 下部2カラム ===== */
+  .bot { display: flex; gap: 3mm; margin-top: 2.2mm; }
+  .bx { flex: 1; border: 2px dashed #ee6b72; border-radius: 5px; padding: 2.4mm 3.5mm; }
+  .bx.red { border-color: #d62c39; }
+  .bx .bt { font-size: 10pt; font-weight: 800; color: #d62c39; margin-bottom: 1.2mm; }
+  .bx p { margin: 0; font-size: 8pt; line-height: 1.55; color: #444; }
+
+  .ft {
+    margin-top: 2.2mm; background: #33404e; color: #fff; border-radius: 5px;
+    padding: 2.4mm 4mm; font-size: 8.2pt; line-height: 1.55;
+  }
+  .ft strong { color: #ffd9dc; }
+  .red { color: #d62c39; font-weight: 800; }
+  strong { color: #33404e; }
+</style>
+</head>
+<body>
+
+<div class="hd">
+  <h1>HAIRCAMP オンラインサロン　MOSH移行のご案内
+    <span>サロンオーナー様へ</span></h1>
+  <div class="tag">この1枚で<br>やることが分かります</div>
+</div>
+
+<!-- ===== 日程 ===== -->
+<div class="h">まず、切り替えの日程です</div>
+<div class="sched">
+  <div class="sc">
+    <div class="who">新規のお客様</div>
+    <div class="dt">9/7（月）〜</div>
+    <div class="ds">HAIRCAMPでの入会受付を停止し、<strong>MOSHへ自動でリダイレクト</strong>されます。<br><strong>オーナー様のお手続きは不要です。</strong></div>
+  </div>
+  <div class="sc on">
+    <div class="who">既存会員様<span class="badge">こちらが本題</span></div>
+    <div class="dt">9/28（月）〜</div>
+    <div class="ds"><strong>全サロン一斉</strong>に移行のご案内を開始します。<br><strong class="red">会員様へのご案内をお願いします。</strong></div>
+  </div>
+</div>
+
+<!-- ===== アクション ===== -->
+<div class="h">オーナー様にお願いしたいこと ＝ <em>3つ</em>だけです</div>
+
+<div class="act">
+  <div class="no">1</div>
+  <div class="ab">
+    <div class="at">会員サイトの中身を確認する</div>
+    <div class="ad">MOSH担当者と一緒に、公開前の会員サイトをご確認ください。リリース日は<strong>9/28（月）／全サロン一斉</strong>で確定しています。</div>
+  </div>
+</div>
+
+<div class="act">
+  <div class="no">2</div>
+  <div class="ab">
+    <div class="at">サロンのトピックスに投稿する　<b>← 最低3回</b></div>
+    <div class="ad">1回だけだと、<strong>手続きを忘れる会員様が必ず出ます。</strong>
+      <table class="cal">
+        <tr><td class="n">1回目</td><td class="d">9/21（月）</td><td>予告（1週間前）</td></tr>
+        <tr><td class="n">2回目</td><td class="d">9/28（月）</td><td>手順を案内（<strong>手順画像を添付</strong>）</td></tr>
+        <tr><td class="n">3回目</td><td class="d">10/5（月）ごろ</td><td>まだの方へ再案内</td></tr>
+      </table>
+      <span class="easy">文章は3回分ぜんぶ用意しています。コピペするだけでOK</span>
+    </div>
+  </div>
+</div>
+
+<div class="act">
+  <div class="no">3</div>
+  <div class="ab">
+    <div class="at">SNSでも会員様へご案内する</div>
+    <div class="ad"><strong>Instagram・オープンチャット・公式LINE</strong>など、ふだんお使いのものだけでOKです。<strong>サロンを開いていない会員様に届くのは、こちらだけです。</strong><br>
+      <span class="easy">SNS用の短い文章も用意しています。コピペするだけでOK</span></div>
+  </div>
+</div>
+
+<!-- ===== 会員へ伝えること ===== -->
+<div class="h">会員様に必ずお伝えいただきたい <em>3点</em></div>
+<div class="pts">
+  <div class="pt">
+    <span class="pn">POINT 1</span>
+    <div class="pb">必ず「ご案内したURL」から申し込む</div>
+    <div class="pd">このURLから開くと<strong>1ヶ月無料クーポンが自動で入ります</strong>。別経路だと適用されず、初月から料金が発生します。</div>
+  </div>
+  <div class="pt">
+    <span class="pn">POINT 2</span>
+    <div class="pb">氏名・メール・電話番号はHAIRCAMPと同じに</div>
+    <div class="pd">この3点で会員情報を照合します。違うと引き継ぎ・解約確認ができません。</div>
+  </div>
+  <div class="pt">
+    <span class="pn">POINT 3</span>
+    <div class="pb">MOSH登録後、HAIRCAMPを解約</div>
+    <div class="pd">順番が大切です。解約を忘れると翌月から両方の支払いが発生します。<br>haircamp.jp/my_page/subscription</div>
+  </div>
+</div>
+
+<!-- ===== 下部 ===== -->
+<div class="bot">
+  <div class="bx">
+    <div class="bt">💰 決済について｜ご安心ください</div>
+    <p>オーナー様・会員様が損を被ることのないよう、HAIRCAMPとMOSH双方で対策を講じています。既存会員様には<strong>1ヶ月無料クーポン（初月0円）</strong>を発行します。<br>
+    <span class="red">これに伴い、オーナー様が損をすることはありません。</span></p>
+  </div>
+  <div class="bx red">
+    <div class="bt">📮 コンテンツ配信について</div>
+    <p>定期的に配信されているサロン様は、<strong>移行期間中（9/28〜10/12ごろ）はMOSHとHAIRCAMPの両方</strong>に同じ内容をアップしてください。<br>
+    片方だけだと<span class="red">まだ移行していない会員様が新着を見られません。</span></p>
+  </div>
+</div>
+
+<div class="ft">
+  <strong>▼ 投稿文・手順画像・よくある質問への回答は、すべて別冊にご用意しています</strong><br>
+  別冊「<strong>サロンオーナー様向けガイド</strong>」に、コピーして使える投稿文（トピックス用4本・SNS用2本）、STEP1〜12の手順画像、質問への返信文を収録。<strong>ゼロから文章を考えていただく必要はありません。</strong><br>また、<strong>HAIRCAMPのマイページにも同じ手順画像を掲載します</strong>（見逃した会員様の受け皿。気づいていただくにはオーナー様のご案内が必要です）。
+</div>
+
+</body>
+</html>

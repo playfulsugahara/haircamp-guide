@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>MOSH移行のご案内｜HAIRCAMP オンラインサロン</title>
+<meta property="og:title" content="MOSH移行のご案内｜HAIRCAMP オンラインサロン">
+<meta name="theme-color" content="#F3E8DD">
+<style>*{box-sizing:border-box}body{margin:0}</style>
+<style>
+/* =========================================================
+   トンマナ：8/2 キックオフ講義スライドに準拠
+   クリーム地／極太の墨線／太ゴシック／朱の差し色／マーカー
+   意図的に単一テーマ（クリーム）で通す
+   ========================================================= */
+:root,
+:root[data-theme="light"],
+:root[data-theme="dark"]{
+  --cream:#F3E8DD;
+  --cream-lt:#FAF3EC;
+  --white:#FFFFFF;
+  --ink:#211815;
+  --ink-2:#5C4E44;
+  --muted:#8A7A6D;
+  --red:#E74A25;
+  --blue:#1E44A0;
+  --green:#33A055;
+  --orange:#E1813A;
+  --gold:#DCA839;
+  --hl:#F7D9A8;
+  --sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic","YuGothic",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --bw:3px;
+  --measure:40rem;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;} *{transition:none!important;animation:none!important;}}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.9;
+  letter-spacing:.02em;
+  -webkit-font-smoothing:antialiased;
+  word-break:auto-phrase;
+  line-break:strict;
+  font-feature-settings:"palt" 1;
+}
+h1,h2,h3,h4,.eyebrow,.chip,.lead,.big-note,.v .nm,.pyr .nm{text-wrap:balance;}
+p,li,td,th,dd,.sm{text-wrap:pretty;}
+
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.1rem;}
+
+/* ---------- utility ---------- */
+.hl{background:linear-gradient(transparent 58%, var(--hl) 58%);padding:0 2px;}
+.accent{color:var(--red);}
+b,strong{font-weight:800;}
+a{color:var(--ink);text-decoration-color:var(--red);text-underline-offset:.2em;}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:2px;}
+
+/* ---------- sticky bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:var(--cream);
+  border-bottom:var(--bw) solid var(--ink);
+}
+.topbar .wrap{display:flex;align-items:center;gap:.7rem;height:3.1rem;}
+.topbar .mk{
+  flex:1;font-weight:800;font-size:.92rem;letter-spacing:.06em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.topbar .to{
+  font-weight:800;font-size:.72rem;letter-spacing:.1em;
+  border:2px solid var(--ink);border-radius:5px;background:var(--white);
+  padding:.26rem .7rem;text-decoration:none;color:var(--ink);white-space:nowrap;
+}
+
+/* ---------- masthead ---------- */
+.masthead{padding:2.5rem 0 2rem;}
+.eyebrow{
+  font-size:.78rem;letter-spacing:.18em;color:var(--muted);
+  font-weight:800;margin-bottom:.8rem;
+}
+h1.title{
+  font-size:clamp(2rem,8.4vw,2.6rem);
+  line-height:1.28;letter-spacing:.05em;font-weight:800;
+  margin:0 0 1.1rem;
+}
+.subtitle{font-size:1rem;line-height:1.8;font-weight:500;margin:0;}
+.meta{
+  font-size:.76rem;color:var(--muted);letter-spacing:.06em;font-weight:800;
+  font-variant-numeric:tabular-nums;margin-top:1.1rem;
+}
+
+.archive{
+  display:flex;align-items:center;gap:.8rem;
+  margin-top:1.4rem;padding:.85rem 1rem;
+  border:var(--bw) solid var(--ink);border-radius:8px;background:var(--white);
+  text-decoration:none;color:var(--ink);
+}
+.archive .ico{
+  width:2.1rem;height:2.1rem;flex:none;border-radius:50%;
+  background:var(--red);color:var(--white);
+  display:grid;place-items:center;font-size:.8rem;
+}
+.archive .tx{flex:1;line-height:1.5;}
+.archive .tx b{display:block;font-size:.95rem;letter-spacing:.04em;}
+.archive .tx span{font-size:.72rem;color:var(--muted);font-weight:800;letter-spacing:.06em;}
+.archive .ar{font-weight:800;font-size:1.1rem;}
+
+/* ---------- note (dashed) ---------- */
+.note{
+  border:3px dashed var(--ink);border-radius:8px;background:var(--white);
+  padding:1.1rem 1.15rem;margin:1.6rem 0 0;
+}
+.note h2{font-size:1rem;font-weight:800;letter-spacing:.06em;margin:0 0 .6rem;}
+.note p{margin:0 0 .8rem;font-size:.9rem;line-height:1.8;}
+.note ul{margin:0;padding-left:1.1rem;font-size:.875rem;line-height:1.8;}
+.note li{margin-bottom:.35rem;}
+
+/* ---------- timestamp chip ---------- */
+.ts{
+  display:inline-flex;align-items:center;gap:.3rem;
+  font-size:.7rem;font-weight:800;letter-spacing:.06em;
+  font-variant-numeric:tabular-nums;
+  border:2px solid var(--ink);border-radius:5px;background:var(--white);
+  padding:.1rem .45rem;white-space:nowrap;vertical-align:.06em;
+  color:var(--ink);
+}
+.ts::before{content:"▶";font-size:.56em;color:var(--red);}
+.ts-line{margin:0 0 1rem;display:flex;flex-wrap:wrap;gap:.35rem;}
+
+/* ---------- TOC ---------- */
+.toc{margin:2.6rem 0 1rem;border:var(--bw) solid var(--ink);border-radius:8px;overflow:hidden;background:var(--white);}
+.toc h2{
+  background:var(--ink);color:var(--cream);margin:0;
+  font-size:.8rem;font-weight:800;letter-spacing:.16em;
+  padding:.7rem 1rem;
+}
+.toc ol{list-style:none;margin:0;padding:0;}
+.toc li + li{border-top:2px solid var(--ink);}
+.toc a{display:flex;align-items:baseline;gap:.65rem;padding:.7rem .9rem;text-decoration:none;color:var(--ink);}
+.toc li:nth-child(odd) a{background:var(--cream-lt);}
+.toc a:hover{background:var(--hl);}
+.toc .n{font-weight:800;font-size:.74rem;color:var(--red);flex:none;width:1.3rem;font-variant-numeric:tabular-nums;}
+.toc .l{flex:1;font-size:.9rem;line-height:1.55;font-weight:700;}
+.toc .t{font-size:.68rem;color:var(--muted);font-weight:800;flex:none;font-variant-numeric:tabular-nums;}
+
+/* ---------- sections ---------- */
+section{padding:2.8rem 0 .5rem;}
+section + section{border-top:var(--bw) solid var(--ink);}
+h2.sec{
+  font-size:clamp(1.45rem,6vw,1.8rem);
+  line-height:1.35;letter-spacing:.05em;font-weight:800;
+  margin:0 0 1.4rem;
+}
+h3{
+  font-size:1.1rem;font-weight:800;letter-spacing:.04em;line-height:1.5;
+  margin:2.4rem 0 .9rem;
+  border-left:8px solid var(--ink);padding-left:.65rem;
+}
+h4{
+  font-size:.9rem;font-weight:800;letter-spacing:.06em;color:var(--red);
+  margin:1.6rem 0 .55rem;
+}
+p{margin:0 0 1.1rem;}
+ul,ol{padding-left:1.2rem;margin:0 0 1.2rem;}
+li{margin-bottom:.45rem;}
+li::marker{color:var(--red);font-weight:800;}
+.sm{font-size:.84rem;color:var(--ink-2);line-height:1.75;}
+
+/* ---------- quote ---------- */
+blockquote{
+  margin:0 0 1.2rem;padding:.1rem 0 .1rem 1rem;
+  border-left:7px solid var(--red);
+  font-weight:500;
+}
+blockquote p{margin:0 0 .65rem;}
+blockquote p:last-child{margin-bottom:0;}
+blockquote.big{
+  border:var(--bw) solid var(--ink);border-left:9px solid var(--red);
+  border-radius:0 8px 8px 0;background:var(--white);
+  padding:1rem 1.1rem;
+}
+blockquote .lead{
+  font-size:1.08rem;font-weight:800;line-height:1.65;letter-spacing:.04em;
+}
+
+/* ---------- Q&A ---------- */
+.qa{
+  border:var(--bw) solid var(--ink);border-radius:8px;background:var(--white);
+  padding:1rem 1.05rem;margin:0 0 1.2rem;
+}
+.qa .q{display:flex;gap:.6rem;margin:0 0 .85rem;font-weight:800;line-height:1.7;letter-spacing:.03em;}
+.qa .q::before{
+  content:"Q";flex:none;width:1.5rem;height:1.5rem;border-radius:50%;
+  background:var(--ink);color:var(--cream);font-size:.78rem;font-weight:800;
+  display:grid;place-items:center;margin-top:.25rem;
+}
+.qa > *:last-child{margin-bottom:0;}
+
+/* ---------- vessels（キックオフのイラスト流用） ---------- */
+.vessels{display:flex;flex-direction:column;gap:.85rem;margin:0 0 1.4rem;}
+.v{
+  border:var(--bw) solid var(--ink);border-radius:8px;overflow:hidden;
+  background:var(--white);display:flex;align-items:stretch;
+}
+.v .pic{
+  flex:none;width:106px;padding:.7rem;display:grid;place-items:center;
+  background:var(--cream-lt);border-right:var(--bw) solid var(--ink);
+}
+.v .pic img{max-width:100%;max-height:104px;object-fit:contain;
+  filter:drop-shadow(0 4px 7px rgba(0,0,0,.18));}
+.v .cap{padding:.75rem .9rem;flex:1;display:flex;flex-direction:column;justify-content:center;}
+.v .no{font-size:.72rem;font-weight:800;letter-spacing:.12em;color:var(--muted);}
+.v .nm{font-size:1.12rem;font-weight:800;letter-spacing:.06em;margin-top:.05rem;}
+.v .ds{font-size:.83rem;line-height:1.6;margin-top:.3rem;}
+.v .hw{
+  font-size:.72rem;font-weight:800;color:var(--ink-2);letter-spacing:.03em;
+  margin-top:.4rem;padding-top:.4rem;border-top:2px dashed var(--muted);
+}
+
+/* ---------- pyramid ---------- */
+.pyr{display:flex;flex-direction:column;align-items:center;gap:.35rem;margin:0 0 .8rem;}
+.pyr .lvl{
+  width:100%;border:var(--bw) solid var(--ink);border-radius:7px;
+  padding:.55rem .8rem;display:flex;align-items:baseline;gap:.55rem;
+  background:var(--white);
+}
+.pyr .ix{font-size:.75rem;font-weight:800;color:var(--red);flex:none;}
+.pyr .nm{font-size:1rem;font-weight:800;letter-spacing:.06em;flex:none;}
+.pyr .ds{font-size:.76rem;color:var(--ink-2);flex:1;line-height:1.5;}
+.pyr .l5{width:64%;}
+.pyr .l4{width:73%;}
+.pyr .l3{width:82%;}
+.pyr .l2{width:91%;}
+.pyr .l1{width:100%;}
+.pyr-cap{font-size:.76rem;color:var(--muted);text-align:center;font-weight:800;letter-spacing:.06em;margin:0 0 1.5rem;}
+@media (max-width:430px){
+  .pyr .lvl{flex-direction:column;gap:.1rem;align-items:flex-start;}
+  .pyr .l5{width:76%;}.pyr .l4{width:83%;}.pyr .l3{width:89%;}.pyr .l2{width:95%;}
+}
+
+/* ---------- callout / big-note ---------- */
+.callout{
+  border:var(--bw) solid var(--ink);border-radius:8px;background:var(--cream-lt);
+  padding:1rem 1.1rem;margin:0 0 1.2rem;
+}
+.callout .k{
+  display:inline-block;background:var(--ink);color:var(--cream);
+  font-size:.68rem;font-weight:800;letter-spacing:.12em;
+  padding:.15rem .6rem;border-radius:4px;margin-bottom:.5rem;
+}
+.callout .k.o{background:var(--orange);}
+.callout p{margin:0 0 .9rem;font-size:.93rem;line-height:1.75;}
+.callout > *:last-child{margin-bottom:0;}
+
+.bignote{
+  border:var(--bw) solid var(--ink);border-radius:8px;background:var(--red);
+  color:var(--cream-lt);padding:1rem 1.1rem;margin:0 0 1.2rem;
+  font-size:1.05rem;font-weight:800;line-height:1.6;letter-spacing:.04em;
+}
+.bignote .s{display:block;font-size:.85rem;font-weight:500;line-height:1.7;margin-top:.5rem;letter-spacing:.02em;}
+
+/* ---------- tables ---------- */
+.tbl{overflow-x:auto;margin:0 0 1.3rem;-webkit-overflow-scrolling:touch;}
+table{border-collapse:collapse;width:100%;font-size:.82rem;line-height:1.65;}
+th,td{border:2px solid var(--ink);padding:.5rem .6rem;text-align:left;vertical-align:top;}
+th{background:var(--ink);color:var(--cream);font-weight:800;letter-spacing:.06em;font-size:.74rem;white-space:nowrap;}
+tbody tr:nth-child(odd) td{background:var(--cream-lt);}
+tbody tr:nth-child(even) td{background:var(--white);}
+td.tm{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--red);text-align:center;}
+
+/* ---------- glossary ---------- */
+.gloss{margin:0 0 1.3rem;border:var(--bw) solid var(--ink);border-radius:8px;overflow:hidden;background:var(--white);}
+.gloss div{padding:.8rem .95rem;}
+.gloss div:nth-child(odd){background:var(--cream-lt);}
+.gloss div + div{border-top:2px solid var(--ink);}
+.gloss dt{font-weight:800;font-size:.98rem;letter-spacing:.06em;margin-bottom:.15rem;}
+.gloss dd{margin:0;font-size:.84rem;line-height:1.7;}
+
+/* ---------- footer ---------- */
+footer{
+  margin-top:2.6rem;border-top:var(--bw) solid var(--ink);
+  padding:1.8rem 0 4rem;font-size:.8rem;line-height:1.8;color:var(--ink-2);
+}
+footer p{margin:0 0 .3rem;}
+footer .sig{
+  margin-top:1.1rem;font-size:.7rem;font-weight:800;
+  letter-spacing:.12em;color:var(--muted);
+}
+
+/* =========================================================
+   印刷・PDF書き出し
+   Chrome: --print-to-pdf --no-pdf-header-footer
+   ページサイズはスマホ比率（390 × 720px）
+   ========================================================= */
+@media print{
+  @page{ size:390px 720px; margin:0; }
+  html,body{ background:var(--cream); }
+  .topbar,.totop{ display:none !important; }
+  .wrap{ max-width:none; padding:0 14px; }
+  section{ padding-top:1.6rem; }
+  .masthead{ padding-top:1.4rem; }
+
+  /* 途中で割れると読めなくなる塊は分割しない */
+  .v,.qa,.callout,.bignote,.note,.archive,.pyr,
+  blockquote,h3,h4,.gloss div,.toc,tr,footer{
+    break-inside:avoid; page-break-inside:avoid;
+  }
+  footer{ margin-top:1.5rem; padding-bottom:1rem; }
+  h2.sec,h3,h4{ break-after:avoid; page-break-after:avoid; }
+  section{ break-before:page; page-break-before:always; }
+  section:first-of-type{ break-before:auto; page-break-before:auto; }
+
+  /* 背景色・墨線を必ず出す */
+  *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  a{ text-decoration:none; }
+}
+
+/* ---------- back to top ---------- */
+.totop{
+  position:fixed;right:.9rem;bottom:.9rem;z-index:60;
+  width:2.7rem;height:2.7rem;border-radius:50%;
+  border:var(--bw) solid var(--ink);background:var(--white);
+  display:grid;place-items:center;text-decoration:none;
+  font-weight:800;font-size:1rem;color:var(--ink);
+}
+.totop:hover{background:var(--hl);}
+</style>
+
+<style>
+  .toc a{flex-direction:column;align-items:stretch;gap:.15rem;padding:.9rem;}
+  .toc .dt{font-size:.7rem;font-weight:800;letter-spacing:.12em;color:var(--red);
+    font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;}
+  .badge{
+    display:inline-block;
+    font-size:.62rem;font-weight:800;letter-spacing:.08em;color:var(--ink);
+    border:2px solid var(--ink);border-radius:999px;padding:.08rem .5rem;
+    background:var(--white);white-space:nowrap;vertical-align:.08em;
+  }
+  .toc .ttl{font-size:1rem;font-weight:800;letter-spacing:.03em;line-height:1.5;}
+  .toc .ttl .arw{color:var(--muted);font-weight:800;}
+  .toc .sum{font-size:.8rem;line-height:1.65;color:var(--ink-2);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="eyebrow">HAIRCAMP オンラインサロン</div>
+    <h1 class="title">MOSH移行のご案内</h1>
+    <p class="subtitle">HAIRCAMP オンラインサロンは MOSH へ移行します。必要な資料をこちらにまとめました。</p>
+    <div class="note" style="margin-top:1.6rem">
+      <p>お手元のスマホ・パソコンから、そのままご覧いただけます。<b>ログインや会員登録は不要</b>です。</p>
+      <p style="margin-bottom:0">ご不明な点は、担当までお気軽にお問い合わせください。</p>
+    </div>
+  </header>
+  <nav class="toc" style="margin-top:1.6rem">
+    <h2>資料</h2>
+    <ol>
+      <li><a href="./onepager/">
+        <span class="dt">まずはこちら</span>
+        <span class="ttl">MOSH移行のご案内（1枚まとめ） <span class="arw">→</span></span>
+        <span class="sum">何がどう変わるのか、いつまでに何をすればよいのかを1枚にまとめています</span>
+      </a></li>
+      <li><a href="./guide/">
+        <span class="dt">詳しい手順</span>
+        <span class="ttl">MOSH移行 サロンオーナー様向けガイド <span class="arw">→</span></span>
+        <span class="sum">お申し込みから会員サイトのご利用まで、実際の画面12枚で手順をご案内します</span>
+      </a></li>
+      <li><a href="./copysheet/">
+        <span class="dt">コピペ用</span>
+        <span class="ttl">コピペするだけシート <span class="arw">→</span></span>
+        <span class="sum">会員のみなさまへのご案内文。そのままコピーしてお使いいただけます</span>
+      </a></li>
+    </ol>
+  </nav>
+  <footer>
+    <p>サロンオーナーのみなさま向けのページです。</p>
+    <p class="sig">HAIRCAMP オンラインサロン／PLAYFUL</p>
+  </footer>
+</div>
+</body>
+</html>

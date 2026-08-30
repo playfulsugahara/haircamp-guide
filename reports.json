@@ -1,0 +1,29 @@
+[
+  {
+    "path": "onepager",
+    "title": "MOSH移行のご案内（1枚まとめ）",
+    "summary": "何がどう変わるのか、いつまでに何をすればよいのかを1枚にまとめています",
+    "kind": "article",
+    "updated": "2026-08-31",
+    "label": "まずはこちら",
+    "order": 1
+  },
+  {
+    "path": "guide",
+    "title": "MOSH移行 サロンオーナー様向けガイド",
+    "summary": "お申し込みから会員サイトのご利用まで、実際の画面12枚で手順をご案内します",
+    "kind": "article",
+    "updated": "2026-08-31",
+    "label": "詳しい手順",
+    "order": 2
+  },
+  {
+    "path": "copysheet",
+    "title": "コピペするだけシート",
+    "summary": "会員のみなさまへのご案内文。そのままコピーしてお使いいただけます",
+    "kind": "article",
+    "updated": "2026-08-31",
+    "label": "コピペ用",
+    "order": 3
+  }
+]
